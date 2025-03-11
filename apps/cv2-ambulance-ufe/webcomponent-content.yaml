@@ -4,7 +4,10 @@ metadata:
   name: cv2-ambulance-ufe-content
 spec:
   microFrontend: cv2-ambulance-ufe
-  element: cv2-ambulance-wl-list
+  element: cv2-ambulance-wl-app
+  attributes:
+    - name: base-path
+      value: /cv2-ambulance-wl/
   displayRules:
     - allOf:
       - context-name: main-content
