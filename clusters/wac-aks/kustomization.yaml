@@ -3,7 +3,7 @@ kind: Kustomization
 
 labels:
   - pairs:
-      app.kubernetes.io/name: <pfx>-apps
+      app.kubernetes.io/name: cv2-apps
       app.kubernetes.io/instance: release
       app.kubernetes.io/version: "1.0.0"
 
