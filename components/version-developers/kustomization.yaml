@@ -4,3 +4,7 @@ images:
 - name: bocak95/ambulance-ufe
   newName: bocak95/ambulance-ufe # {"$imagepolicy":  "wac-hospital:ambulance-ufe:name"}
   newTag: main.20250311.1222 # {"$imagepolicy": "wac-hospital:ambulance-ufe:tag"}
+- name: bocak95/ambulance-wl-webapi
+  newName:  bocak95/ambulance-wl-webapi # {"$imagepolicy":  "wac-hospital:ambulance-webapi:name"}
+  newTag: main # {"$imagepolicy": "wac-hospital:ambulance-webapi:tag"}
+
