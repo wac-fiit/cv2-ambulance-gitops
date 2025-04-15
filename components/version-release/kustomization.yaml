@@ -3,4 +3,7 @@ kind: Component
 images:
 - name: bocak95/ambulance-ufe
   newName: bocak95/ambulance-ufe
-  newTag: 1.0.0  #aktuálna verzia docker obrazu, kto
+  newTag: 1.1.0  #aktuálna verzia docker obrazu, kto
+- name: bocak95/ambulance-wl-webapi
+  newName: bocak95/ambulance-wl-webapi
+  newTag: 1.1.0
