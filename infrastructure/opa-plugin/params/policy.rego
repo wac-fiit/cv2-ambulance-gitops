@@ -45,7 +45,7 @@ user_role[ "admin" ] if {
 
 # these are admin users
 user_role[ "admin" ] if {
-    user.email == "t.bocinec@gmail.com"
+    user.email == "t.bocinecXX@gmail.com"
 }
 
 # these are users with access to monitoring actions
