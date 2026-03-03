@@ -9,3 +9,6 @@ labels:
 
 resources:
 - ../../../apps/msevcik-ambulance-ufe
+
+components:
+- ../../../components/version-developers
