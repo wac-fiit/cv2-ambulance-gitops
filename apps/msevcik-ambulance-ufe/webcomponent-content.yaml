@@ -6,6 +6,10 @@ spec:
   microFrontend: msevcik-ambulance-ufe
   element: msevcik-ambulance-wl-app
   attributes:
+    - name: api-base
+      value: http://localhost:5005/api
+    - name: ambulance-id
+      value: bobulova
     - name: base-path
       value: /msevcik-ambulance-wl/
   displayRules:
