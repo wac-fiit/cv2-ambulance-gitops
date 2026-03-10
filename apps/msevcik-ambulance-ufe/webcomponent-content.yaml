@@ -4,7 +4,10 @@ metadata:
   name: msevcik-ambulance-ufe-content
 spec:
   microFrontend: msevcik-ambulance-ufe
-  element: msevcik-ambulance-wl-list
+  element: msevcik-ambulance-wl-app
+  attributes:
+    - name: base-path
+      value: /msevcik-ambulance-wl/
   displayRules:
     - allOf:
       - context-name: main-content
