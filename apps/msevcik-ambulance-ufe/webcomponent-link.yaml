@@ -17,7 +17,7 @@ spec:
       value: home_health
     - name: href # presmerovanie po kliknutí na element polyfea-md-app
       value: ./msevcik-ambulance-wl
-  priority: 10
+  priority: 500
   displayRules: # pravidlá, kde sa má element vložiť v obálke
     - anyOf:
       - context-name: applications
