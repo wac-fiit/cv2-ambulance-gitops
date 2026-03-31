@@ -9,6 +9,11 @@ labels:
 
 resources:
 - ../../../apps/msevcik-ambulance-ufe
+- ../../../apps/msevcik-ambulance-webapi
+
+patches:
+- path: patches/ambulance-webapi.service.yaml
 
 components:
 - ../../../components/version-developers
+- https://github.com/wac-fiit/cv2-ambulance-webapi//deployments/kustomize/components/mongodb
