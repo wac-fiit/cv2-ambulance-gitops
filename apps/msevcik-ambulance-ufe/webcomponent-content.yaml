@@ -7,7 +7,7 @@ spec:
   element: msevcik-ambulance-wl-app
   attributes:
     - name: api-base
-      value: http://localhost:30081/api
+      value: /msevcik-api
     - name: ambulance-id
       value: bobulova
     - name: base-path
