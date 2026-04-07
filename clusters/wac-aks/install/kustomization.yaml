@@ -12,6 +12,7 @@ labels:
 
 resources:
 - ../../../apps/msevcik-ambulance-ufe
+- ../../../apps/msevcik-ambulance-webapi
 
 
 components:
