@@ -6,5 +6,9 @@ resources:
 - openapi-ui.service.yaml
 - http-route.yaml
 
+labels:
+  - pairs:
+      wac-fiit.github.io/component: backend
+
 patches:
 - path: patches/ambulance-webapi.deployment.yaml

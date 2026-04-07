@@ -1,0 +1,12 @@
+apiVersion: wac-fiit.github.io/v1alpha1
+kind: Project
+metadata:
+  name: msevcik-ambulance-wl
+spec:
+  title: Zoznam čakajúcich Michal Sevcik # napr. "Zoznam čakajúcich <pfx>"
+  description: Spravuje zoznam pacientov čakajúcich na vyšetrenie v ambulancii # napr. "Spravuje zoznam pacientov čakajúcich na vyšetrenie v ambulancii"
+  authors: "Michal Sevcik" # Zadajte mená autorov
+  azureLink: "https://msevcik-ambulance-ufe-g6b7b0h3cpfycpdh.westeurope-01.azurewebsites.net"
+  frontendRepoUrl: "https://github.com/wac-fiit/cv2-ambulance-ufe"
+  backendRepoUrl: "https://github.com/wac-fiit/cv2-ambulance-webapi"
+  gitopsRepoUrl: "https://github.com/wac-fiit/cv2-ambulance-gitops"
