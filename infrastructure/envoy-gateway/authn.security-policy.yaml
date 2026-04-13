@@ -14,7 +14,7 @@ spec:
       provider:
         issuer: https://wac-hospital.loc/dex
         authorizationEndpoint: https://wac-hospital.loc/dex/auth
-        tokenEndpoint: https://wac-hospital.loc/dex/token
+        tokenEndpoint: http://dex.wac-hospital:5556/dex/token
       clientIDRef:
         name: oidc-dex
       clientSecret:
