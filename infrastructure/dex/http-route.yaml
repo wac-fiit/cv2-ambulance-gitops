@@ -11,17 +11,18 @@ spec:
         - path:
             type: PathPrefix
             value: /dex
-        
+
       backendRefs:
         - group: ""
           kind: Service
           name: dex
           port: 5556
-    
+
+# authn callback je spracovaný interne envoy proxy
+# musíme ho ale definovať aby ho envoy neodmietol
+# a aby sme ho mohli nakonfigurovať bypass security policy
+
     - matches:
-      - path:
-          type: Exact
-          # authn callback je spracovaný interne envoy proxy
-          # musíme ho ale definovať aby ho envoy neodmietol 
-          # a aby sme ho mohli nakonfigurovať bypass security policy 
-          value: /authn/callback 
+        - path:
+            type: Exact
+            value: /authn/callback
