@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: milung/verify-authnz
+    branch: milung/verfiy-authnz
   secretRef:
     name: repository-pat
   timeout: 1m0s
