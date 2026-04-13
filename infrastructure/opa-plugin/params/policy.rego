@@ -4,12 +4,12 @@ import input.attributes.request.http as http_request
 default allow = false
 
 # define authenticated user
-is_valid_user = true if { http_request.headers["x-auth-request-email"] }
+is_valid_user = true if { http_request.headers["x-forwarded-email"] }
 
 user = { "valid": valid, "email": email, "name": name} if {
     valid := is_valid_user
-    email := http_request.headers["x-auth-request-email"]
-    name := http_request.headers["x-auth-request-user"]
+    email := http_request.headers["x-forwarded-email"]
+    name := http_request.headers["x-forwarded-user"]
 }
 
 # define required roles for paths
@@ -70,7 +70,7 @@ allow if {
 # set header to indicate that this policy was used to validate the request
 headers["x-validated-by"] := "opa-checkpoint"
 
-headers["x-auth-request-roles"] := concat(", ", [ role |
+headers["x-forwarded-roles"] := concat(", ", [ role |
     some r
     user_role[r]
     role := r
