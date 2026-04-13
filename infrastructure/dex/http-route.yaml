@@ -11,6 +11,9 @@ spec:
         - path:
             type: PathPrefix
             value: /dex
+        - path:
+            type: PathPrefix
+            value: /oauth2
 
       backendRefs:
         - group: ""
