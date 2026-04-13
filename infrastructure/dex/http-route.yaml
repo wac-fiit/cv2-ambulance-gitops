@@ -11,6 +11,12 @@ spec:
         - path:
             type: PathPrefix
             value: /dex
+        - path:
+          type: Exact
+          # authn callback je spracovaný interne envoy proxy
+          # musíme ho ale definovať aby ho envoy neodmietol 
+          # a aby sme ho mohli nakonfigurovať bypass security policy 
+          value: /authn/callback 
       backendRefs:
         - group: ""
           kind: Service
