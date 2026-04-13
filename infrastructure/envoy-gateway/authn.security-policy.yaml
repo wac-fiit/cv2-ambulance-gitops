@@ -45,6 +45,15 @@ spec:
         name: dex-sso
         remoteJWKS:
           uri: http://dex.wac-hospital:5556/dex/keys
+    extAuth:
+          grpc:
+            backendRefs:
+              - name: opa-plugin
+                port: 9191
+          headersToExtAuth:
+            - x-forwarded-preferred-username
+            - x-forwarded-user
+            - x-forwarded-email
 ---
 apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: SecurityPolicy
