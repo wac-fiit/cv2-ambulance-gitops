@@ -2,7 +2,7 @@ apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: EnvoyProxy
 metadata:
   name: custom-filter-order
-  namespace: wac-hospital # Použi namespace, kde máš svoju Gateway
+  namespace: wac-hospital
 spec:
   provider:
     type: Kubernetes
