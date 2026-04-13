@@ -8,6 +8,7 @@ spec:
     - group: gateway.networking.k8s.io
       kind: Gateway
       name: wac-hospital-gateway
+      sectionName: fqdn
 
     oidc:
       provider:
@@ -44,3 +45,15 @@ spec:
         name: dex-sso
         remoteJWKS:
           uri: https://wac-hospital.loc/dex/keys
+---
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: SecurityPolicy
+metadata:
+  name: dex-bypass-authn
+  namespace: wac-hospital
+spec:
+    targetRefs:
+    - kind: HTTPRoute
+      name: dex
+# no oidc or jwt config means bypass authn for the matched route 
+# - route is more specific than gateway
