@@ -1,7 +1,8 @@
 apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: SecurityPolicy
 metadata:
-  name: authn-security-policy
+  name: authn
+  namespace: wac-hospital
 spec:
     targetRefs:
     - group: gateway.networking.k8s.io
