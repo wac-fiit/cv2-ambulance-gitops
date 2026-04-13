@@ -1,0 +1,45 @@
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: SecurityPolicy
+metadata:
+  name: authn-security-policy
+spec:
+    targetRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: wac-hospital-gateway
+
+    oidc:
+      provider:
+        issuer: https://wac-hospital.loc/dex
+        authorizationEndpoint: https://wac-hospital.loc/dex/auth
+        tokenEndpoint: https://wac-hospital.loc/dex/token
+      clientIDRef:
+        name: oidc-dex
+      clientSecret:
+        name: oidc-dex
+      redirectURL: https://wac-hospital.loc/authn/callback # callback Envoy Gateway
+      forwardAccessToken: true
+      cookieNames:
+        idToken: wac-hospital-id-token
+        accessToken: wac-hospital-access-token
+      scopes:
+      - profile
+      - email
+      - openid
+      - federated:id
+    jwt:
+      optional: false
+      providers:
+      - claimToHeaders:
+        - claim: name
+          header: x-forwarded-preferred-username
+        - claim: name
+          header: x-forwarded-user
+        - claim: email
+          header: x-forwarded-email
+        extractFrom:
+          cookies:
+          - wac-hospital-id-token
+        name: dex-sso
+        remoteJWKS:
+          uri: https://wac-hospital.loc/dex/keys
