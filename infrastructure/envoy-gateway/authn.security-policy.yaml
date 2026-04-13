@@ -44,7 +44,7 @@ spec:
           - wac-hospital-id-token
         name: dex-sso
         remoteJWKS:
-          uri: https://dex.wac-hospital/dex/keys
+          uri: http://dex.wac-hospital:5556/dex/keys
 ---
 apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: SecurityPolicy
