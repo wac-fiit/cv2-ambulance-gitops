@@ -56,5 +56,8 @@ spec:
     - group: gateway.networking.k8s.io
       kind: HTTPRoute
       name: dex
-# no oidc or jwt config means bypass authn for the matched route 
-# - route is more specific than gateway
+# Tato policy je viac špecifická (htt-route > gateway) 
+# a preto bude mať prednosť pred authn policy 
+#  v tomto pripade dovolime neauthentifikované požiadavky 
+# pre protokol oidc aby sme sa vyhli nekonečným presmerovaniam
+    
