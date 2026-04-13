@@ -21,7 +21,7 @@ connectors:  # GitHub OAuth provider
 staticClients:  # WAC hospital client of Dex
 - id: envoy-gateway
   redirectURIs:
-  - 'https://wac-hospital.loc/authn/callback'
+  - 'https://wac-hospital.loc/oauth2/callback'
   name: 'Envoy Gateway'
   secret: envoy-gateway-secret-265305158967
 

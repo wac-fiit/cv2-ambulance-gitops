@@ -18,11 +18,4 @@ spec:
           name: dex
           port: 5556
 
-# authn callback je spracovaný interne envoy proxy
-# musíme ho ale definovať aby ho envoy neodmietol
-# a aby sme ho mohli nakonfigurovať bypass security policy
 
-    - matches:
-        - path:
-            type: Exact
-            value: /authn/callback

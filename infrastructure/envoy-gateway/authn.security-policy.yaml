@@ -19,7 +19,7 @@ spec:
         name: oidc-dex
       clientSecret:
         name: oidc-dex
-      redirectURL: https://wac-hospital.loc/authn/callback
+      redirectURL: https://wac-hospital.loc/oauth2/callback
       forwardAccessToken: true
       cookieNames:
         idToken: wac-hospital-id-token
@@ -44,7 +44,7 @@ spec:
           - wac-hospital-id-token
         name: dex-sso
         remoteJWKS:
-          uri: https://wac-hospital.loc/dex/keys
+          uri: https://dex.wac-hospital/dex/keys
 ---
 apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: SecurityPolicy
