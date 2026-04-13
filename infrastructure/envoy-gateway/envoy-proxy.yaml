@@ -8,4 +8,4 @@ spec:
     type: Kubernetes
   filterOrder:
     - name: envoy.filters.http.ext_authz
-      after: envoy.filters.http.jwt_authn
+      after: envoy.filters.http.oauth2
