@@ -11,9 +11,6 @@ spec:
         - path:
             type: PathPrefix
             value: /dex
-        - path:
-            type: PathPrefix
-            value: /oauth2
 
       backendRefs:
         - group: ""
@@ -21,4 +18,19 @@ spec:
           name: dex
           port: 5556
 
+# authn callback je presmerovaný na interný envoy proxy
+# endpoint 
+# musíme ho ale definovať aby ho envoy neodmietol
+# a aby sme ho mohli nakonfigurovať bypass security policy
 
+    - matches:
+      - path:
+          type: Exact
+          value: /authn/callback
+      filters:
+      - type: RequestRedirect
+        requestRedirect:
+          path: 
+            type: ReplaceFullPath
+            replaceFullPath: /oauth2/callback
+          statusCode: 302
