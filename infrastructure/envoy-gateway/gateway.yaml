@@ -16,10 +16,10 @@ spec:
   gatewayClassName: wac-hospital-gateway-class
 
   infrastructure:
-  parametersRef: 
-    group: gateway.envoyproxy.io 
-    kind: EnvoyProxy 
-    name: custom-filter-order
+    parametersRef: 
+      group: gateway.envoyproxy.io 
+      kind: EnvoyProxy 
+      name: custom-filter-order
   
   listeners:
   - allowedRoutes:
