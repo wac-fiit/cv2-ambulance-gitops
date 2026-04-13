@@ -9,8 +9,7 @@ spec:
   rules:
 # authn callback je presmerovaný na interný envoy proxy
 # endpoint 
-# musíme ho ale definovať aby ho envoy neodmietol
-# a aby sme ho mohli nakonfigurovať bypass security policy
+# musíme ho ale definovať aby ho envoy gateway neodmietol
     - matches:
       - path:
           type: Exact
