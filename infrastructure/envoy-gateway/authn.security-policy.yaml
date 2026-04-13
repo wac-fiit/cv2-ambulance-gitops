@@ -18,7 +18,7 @@ spec:
         name: oidc-dex
       clientSecret:
         name: oidc-dex
-      redirectURL: https://wac-hospital.loc/authn/callback # callback Envoy Gateway
+      redirectURL: https://wac-hospital.loc/authn/callback
       forwardAccessToken: true
       cookieNames:
         idToken: wac-hospital-id-token

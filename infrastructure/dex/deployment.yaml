@@ -24,17 +24,12 @@ spec:
         - name: GITHUB_CLIENT_ID
           valueFrom:
             secretKeyRef:
-              name: oidc
+              name: oidc-client
               key: client-id
         - name: GITHUB_CLIENT_SECRET
           valueFrom:
             secretKeyRef:
-              name: oidc
-              key: client-secret
-        - name: ENVOY_CLIENT_SECRET
-          valueFrom:
-            secretKeyRef:
-              name: oidc-dex
+              name: oidc-client
               key: client-secret
         volumeMounts:
         - name: config
