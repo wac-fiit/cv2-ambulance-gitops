@@ -6,7 +6,8 @@ resources:
 - ../../../infrastructure/fluxcd
 - ../../../infrastructure/envoy-gateway
 - ../../../infrastructure/cert-manager
-
+- ../../../infrastructure/dex
+- ../../../infrastructure/opa-plugin
 - ../../../infrastructure/observability
 
 configMapGenerator:
@@ -25,3 +26,4 @@ configMapGenerator:
       
 components:
    - ../../../components/version-developers
+
