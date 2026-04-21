@@ -2,7 +2,7 @@ package wac.authz
 import input.attributes.request.http as http_request
 
 # Define allowed emails
-allowed_emails := {"michal.sevcik@siemens-healthineers.com", "example@email.com"}
+allowed_emails := {"michal.sevcik@protonmail.com", "example@email.com"}
 
 default allow = false
 
