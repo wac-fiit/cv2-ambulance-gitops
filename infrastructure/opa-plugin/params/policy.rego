@@ -1,12 +1,7 @@
 package wac.authz
 import input.attributes.request.http as http_request
 
-# Define allowed emails
-allowed_emails := {"michal.sevcik@protonmail.com", "example@email.com"}
-
-default allow = false
-
-# define authenticated user
+# Define authenticated user
 is_valid_user = true if { http_request.headers["x-forwarded-email"] }
 
 user = { "valid": valid, "email": email, "name": name} if {
@@ -15,10 +10,11 @@ user = { "valid": valid, "email": email, "name": name} if {
     name := http_request.headers["x-forwarded-user"]
 }
 
-# allow access if user is authenticated and email is in allowed list
+default allow = false
+
+# allow access if user is authenticated with a valid email
 allow if {
     user.valid
-    user.email in allowed_emails
 }
 
 # set header to indicate that this policy was used to validate the request
